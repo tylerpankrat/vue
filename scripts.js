@@ -2,7 +2,6 @@ const app = new Vue({
     el: '#main',   
     data: {
         result: " ",
-        responseAvailable: false,
         apiKey: '7a015292b0msh021be62fcabd2a9p1d6b8ajsnc792b637b207'
     },
     mounted() {
@@ -16,8 +15,7 @@ const app = new Vue({
         }
     },
     methods: {
-        fetchAPIData() { 
-            this.responseAvailable = false;
+        fetchAPIData() {
             fetch("https://joke3.p.rapidapi.com/v1/joke", {
                 "method": "GET",
                 "headers": {
@@ -35,7 +33,6 @@ const app = new Vue({
             })
             .then(response => {
                 this.result = response.content; 
-                this.responseAvailable = true;
             })
             .catch(err => {
                 console.log(err);
