@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Responsive + Encoding Meta Tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <link href = "styles.css" rel = "stylesheet">
+    <!-- Title -->
+    <title>Vue.JS API Call</title>
+</head>
+<body>
+    <div id="main">
+        <h1> Vue.JS API Call Example</h1>
+        <button type="button" id="get-joke" @click="fetchAPIData">Get a Joke</button>
+        <p>
+            <textarea v-model="result" value="{{result}}" rows="4" cols="50"></textarea>
+        </p>
+    </div>
+</body>
+<!-- Vue and Custom JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src = "scripts.js"></script>
+</html>
